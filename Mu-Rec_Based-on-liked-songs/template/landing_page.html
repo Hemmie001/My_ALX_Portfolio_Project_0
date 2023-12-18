@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Songs by Popularity</title>
+</head>
+<body>
+    <h1>Top Songs by Popularity</h1>
+    <table>
+        <tr>
+            <th>Song</th>
+            <th>Listen Count</th>
+        </tr>
+        {% for index, row in top_songs.iterrows() %}
+        <tr>
+            <td>{{ row['song'] }}</td>
+            <td>{{ row['listen_count'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
